@@ -5,8 +5,12 @@ body {
   box-sizing: border-box;
   background-color: white;
   width: 100%;
-
   padding-top: 80px;
+  font-size: 16px;
+}
+
+a {
+  text-decoration: none;
 }
 
 header {
@@ -16,6 +20,7 @@ header {
   height: 80px;
   background-color: #BC8F8F;
   padding: 0 20px;
+  box-shadow: 0 1px 1px 0 rgba(60, 64, 67, 0.302), 0 2px 3px 1px rgba(60, 64, 67, 0.149);
 }
 
 .navbar {
@@ -50,10 +55,37 @@ header {
 
 .btns {
   display: flex;
-  background-color: #000;
-  color: #5271ff;
-
+  align-items: center;
+  justify-items: space-between;
+  color: #000;
+  margin-top: 10px;
 }
+
+.btn {
+  position: relative;
+  cursor: pointer;
+  height: 50px;
+  width: 120px;
+  border-radius: 50px;
+  background-color: transparent;
+  color: #527;
+  border: 1px solid #527a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+}
+
+.btn:hover {
+  color: #fff;
+  background-color: #527;
+  transition: 1s;
+  box-shadow: 0 1px 3px 0 rgba(60, 64, 67, 0.302), 0 4px 8px 3px rgba(60, 64, 67, 0.149);
+}
+.btn-github {
+  margin-right: 1rem;
+}
+
 .socials, .bio {
   width: 40%;
 }
