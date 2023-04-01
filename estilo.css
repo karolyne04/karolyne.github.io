@@ -56,13 +56,22 @@ header {
   flex-direction: column;
 }
 
-.socials img {
+.foto {
+  width: 80%;
+  height:450px;
+  display: flex;
+  justify-content: center;
+
+}
+.foto img {
   border-radius: 50%;
   border: 2px  solid #527;
   filter: drop-shadow( 2px 4px 4px rgba(85, 34, 119, 0.80));
   border:liner-gradient(#BC8F8F #527);
-  max-width: 80%;
-  height: 450px;  
+  max-width: 100%;
+  max-height: 100%; 
+
+
 }
 
 .btns {
@@ -76,7 +85,7 @@ header {
   position: relative;
   cursor: pointer;
   height: 50px;
-  width: 90%;
+  width: 100%;
   border-radius: 50px;
   background-color: transparent;
   color: #527;
@@ -94,7 +103,7 @@ header {
   box-shadow: 0 1px 3px 0 rgba(60, 64, 67, 0.302), 0 4px 8px 3px rgba(60, 64, 67, 0.149);
 }
 .btn-github {
-  margin-right: 1rem;
+  margin-right: 1.2rem;
 }
 
 .socials, .bio {
@@ -126,11 +135,12 @@ header {
   align-items: center;
   justify-content: space-around;
   width: 90%;
+  height: 100px;
 }
 
 .icons img {
-  width: 10%;
-  height: 100px;
+  max-width: 100%;
+  max-height: 100%;
 }
 
 footer {
@@ -145,46 +155,93 @@ footer {
   color: #fff;
 }
 
-@media (max-width: 425px) {
-  body {
+@media (max-width: 425px ) {
+  .main-content {
+    height: 95vh;
     display: flex;
     flex-direction: column;
   }
-  header {
-  top: 0;
-  width: 100%;
-  height: 80px;
+  .socials {
+    width: 80%;
+    height: 100px;
+  }
+  .foto  {
+    width: 70%;
+    height: 120px;
+  }
+  .btn {
+    height: 30px;
+    width: 80%;
+    font-size: 1rem;
+  }
+  .bio {
+    width: 80%;
+    height: 400px;
+  }
+  .bio-desc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 80%;
+    height: 300px;
+  }
+  .bio-desc h2 {
+    font-size: 18px;
+  }
+  .bio p {
+    text-align:left;
+    font-size: 1rem;
+  }
+  .icons {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 50%;
+    height: 60px;
+  } 
+  
+}
+@media (max-width: 375px) {
+  body{
+    display: flex;
+    flex-direction: column;
   }
   .main-content {
     display: flex;
     flex-direction: column;
     height: 100vh;
-
   }
   .socials {
-    margin-top: 30px;
-    width: 70%;
-
+    width: 80%;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
   }
-  .socials img {
-    width: 70%;
-    height: 140px;
+  .foto {
+    width: 50%;
+    height: 90px;
   }
   .btn {
     height: 40px;
     width: 80%;
     font-size: 1rem;
   }
+  .bio {
+    display: flex;
+    flex-direction: column;
+  }
   .bio-desc {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     width: 80%;
+    height: 450px;
   }
   .bio-desc h2 {
-    font-size: 20px;
-
+    font-size: 18px;
+    height: 40px;
   }
   .bio p {
     text-align:left;
@@ -195,101 +252,29 @@ footer {
     align-items: center;
     justify-content: space-around;
     width: 80%;
-  }
-  
-  .icons img {
-    width: 10%;
-    height: 100px;
+    height: 90px;
   }
 }
-
-@media (max-width: 375px) {
-  body {
-    display: flex;
-    flex-direction: column;
-  }
-  header {
-  top: 0;
-  width: 100%;
-  height: 80px;
-  }
-  .main-content {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-
-  }
-  .socials {
-    margin-top: 50px;
-    width: 80%;
-
-  }
-  .socials img {
-    width: 50%;
-    height: 60px;
-  }
-  .btn {
-    height: 50px;
-    width: 85%;
-    font-size: 1rem;
-  }
-  .bio-desc {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 80%;
-  }
-  .bio-desc h2 {
-    font-size: 20px;
-
-  }
-  .bio p {
-    text-align:left;
-    font-size: 1rem;
-  }
-  .icons {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    width: 80%;
-  }
-  
-  .icons img {
-    width: 7%;
-    height: 70px;
-  }
-}
-
 @media (max-width: 320px) {
   body {
     display: flex;
     flex-direction: column;
   }  
-  header {
-  top: 0;  
-  width: 100%;
-  height: 80px;
-  }
   .main-content {
     display: flex;
     flex-direction: column;
     height: 100vh;
-
   }  
   .socials {
-    margin-top: 50px;
     width: 80%;
-
-  }  
-  .socials img {
-    width: 70%;
     height: 120px;
   }  
+  .foto {
+    height: 90px;
+    width: 50%;
+  }
   .btn {
-    position: relative;
-    cursor: pointer;
-    height: 40px;
+    height: 30px;
     width: 80%;
     font-size: 0.8rem;
   }  
@@ -301,8 +286,7 @@ footer {
     width: 80%;
   }  
   .bio-desc h2 {
-    font-size: 18px;
-
+    font-size: 15px;
   }  
   .bio p {
     text-align:left;
@@ -312,12 +296,10 @@ footer {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    width: 80%;
+    width: 60%;
+    height: 90px;
   }  
   
-  .icons img {
-    width: 5%;
-    height: 50px;
-  }  
+  
 }  
 
